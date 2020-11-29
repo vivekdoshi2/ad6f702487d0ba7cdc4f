@@ -16,11 +16,7 @@ const AsteroidForm = ({ getAsteroids, getAsteroidDetail, loading, errorMessage }
     };
 
     useEffect(() => {
-        if (errorMessage) {
-            setOpen(true);
-        } else {
-            setOpen(false);
-        }
+        setOpen(errorMessage ? true : false);
     }, [errorMessage])
 
     return <form noValidate autoComplete="off">
